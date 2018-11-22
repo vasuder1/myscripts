@@ -21,3 +21,8 @@ resource "docker_container" "ubuntu"  {
   command = ["sleep", "300" ]
   name = "ubuntu"
 } 
+
+resource "docker_container" "ghost" {
+  image = "ghost:latest"
+  name = "ghost"
+}
