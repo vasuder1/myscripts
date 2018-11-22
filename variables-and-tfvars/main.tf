@@ -7,6 +7,7 @@ resource "docker_image" "image_id" {
 resource "docker_container" "container_id" {
   name  = "${var.container_name}"
   image = "${docker_image.image_id.latest}"
+  hostname = "${var.hostname}"
   ports {
     internal = "${var.int_port}"
     external = "${var.ext_port}"

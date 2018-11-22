@@ -11,4 +11,6 @@ variable "int_port" {
 variable "ext_port" {
   description = "external port where nginx is published for the world"
 }
-
+variable "hostname" {
+  description = "Hostname of the container"
+}
